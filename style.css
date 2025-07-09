@@ -1,44 +1,4 @@
-/*CSS variables para cores
-:root {
-    --text-color:#2c3e50;
-    --background-color: #ffffff;
-}
-
-/*Dark mode support
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #ecf0f1;
-        --background-color: #1a1a1a;
-    }
-}
-
-/* Reset e configurações básicas
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: "Libertinus Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-main{
-    width: 90%;
-    max-width: 800px;
-}
-
-journal-entry {
-    background: var(--);
-}*/
-
-/* Variáveis para cores e espaçamentos */
+/* Variáveis para cores*/
 :root {
     --primary-color: #3498db;
     --secondary-color: #83498d;
@@ -61,19 +21,14 @@ journal-entry {
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
   }
-  
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
+
+  /*Dark mode support*/
+@media (prefers-color-scheme: dark) {
     :root {
-      --primary-color: #ecf0f1;
-      --text-color: #ecf0f1;
-      --text-light: #bdc3c7;
-      --background-color: #1a1a1a;
-      --card-background: #2c2c2c;
-      --border-color: #404040;
-      --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        --text-color: #ecf0f1;
+        --background-color: #1a1a1a;
     }
-  }
+}
   
   /* Reset e configurações básicas */
   * {
@@ -105,45 +60,19 @@ journal-entry {
 
   .main-header {
     text-align: center;
-    margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg 0);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
     
   }
-  /* Entradas do diário */
+  
 .journal-entry {
-    border-radius: var(--radius); /* ou um valor como 8px */
+    border-radius: var(--radius);
     background: var(--background-color);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     transition: transform 0.2s ease, box-shadow 0.25s ease;
-  }
-  
-  .journal-entry:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Header da entrada */
-  .entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: var(--spacing-md);
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-  }
-  
-  .entry-header h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    font-weight: 500;
-  }
-  
-  .entry-header time {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    font-weight: 500;
   }
